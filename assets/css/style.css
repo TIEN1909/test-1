@@ -82,7 +82,7 @@ h3 {
 .header__logo-image {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 .header__menu {
   gap: 0 30px;
@@ -118,14 +118,23 @@ h3 {
 .header__icon {
   width: 36px;
   height: 36px;
+  cursor: pointer;
+  transition: all 450ms ease;
 }
-.header__icon {
+.header__icon :hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 50px;
+}
+.header__icon > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .header__icon-wrapper {
   gap: 0 20px;
+  /* cursor: pointer; */
 }
 /* hero */
 .hero {
@@ -159,6 +168,13 @@ h3 {
 }
 .hero__btn {
   margin-top: 48px;
+  border: 1px solid transparent;
+  transition: all 450ms ease;
+}
+.hero__btn:hover {
+  background-color: transparent;
+  border: 1px solid #f49742;
+  color: #fff;
 }
 .hero__right-img {
   width: 394px;
@@ -201,12 +217,16 @@ h3 {
   height: 350px;
   position: relative;
 }
+.category__product-img:hover .category__name {
+  color: #f49742;
+}
 .category__product-img > img,
 .seller__product-img > img,
 .collection__product-img > img {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  cursor: pointer;
 }
 .category__name {
   position: absolute;
@@ -220,9 +240,8 @@ h3 {
   font-size: 33px;
   line-height: 39px;
   letter-spacing: 0.0025em;
-}
-.category__name--female {
-  color: #f49742;
+  cursor: pointer;
+  transition: all 450ms ease;
 }
 /* seller */
 .seller {
@@ -412,6 +431,15 @@ h3 {
   color: white;
   margin-top: 24px;
   padding: 15px 16px;
+  border: 1px solid transparent;
+}
+.history__btn:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+.history__btn:hover > span {
+  color: #000 !important;
 }
 .history__icon {
   margin-left: 19px;
@@ -528,8 +556,12 @@ h3 {
   gap: 20px 0;
   width: 160px;
 }
-.footer-item {
-  margin-top: 30px;
+.footer__item {
+  /* margin-top: 30px; */
+  transition: all 450ms ease;
+}
+.footer__item > a :hover {
+  color: #f49742;
 }
 .footer__item > a {
   font-style: normal;
